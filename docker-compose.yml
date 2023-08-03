@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  duodb:
+    image: wnameless/oracle-xe-11g-r2
+    ports:
+      - "1521:1521"
+    volumes:
+      - ./data:/u01/app/oracle/data
+    environment:
+      - ORACLE_ALLOW_REMOTE=true
+      - ORACLE_PASSWORD=your_oracle_password
